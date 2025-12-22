@@ -19,6 +19,7 @@ Extracted from the Frame project.
 [dependencies]
 sam-identity = "0.1.0"
 ```
+## Dependency Architecture**frame-identity depends on:**```frame-identity├── frame-catalog (database, embeddings)└── frame-sentinel (trust scoring)```**Used by:** Frame core for biometric authentication**Position in Frame ecosystem:**```frame-catalog ──┬→ frame-identity                │frame-sentinel ─┘```
 
 ```rust
 use sam_identity::{VoiceStore, TypingPatternStore};
