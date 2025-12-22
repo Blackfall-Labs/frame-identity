@@ -2,7 +2,7 @@
 
 **Behavioral and biometric identity verification using voice, typing, and face recognition.**
 
-Extracted from the Frame project.
+Extracted from the Frame microservices architecture.
 
 ## Features
 
@@ -19,7 +19,26 @@ Extracted from the Frame project.
 [dependencies]
 sam-identity = "0.1.0"
 ```
-## Dependency Architecture**frame-identity depends on:**```frame-identity├── frame-catalog (database, embeddings)└── frame-sentinel (trust scoring)```**Used by:** Frame core for biometric authentication**Position in Frame ecosystem:**```frame-catalog ──┬→ frame-identity                │frame-sentinel ─┘```
+
+## Dependency Architecture
+
+**frame-identity depends on:**
+
+```
+frame-identity
+├── frame-catalog (database, embeddings)
+└── frame-sentinel (trust scoring)
+```
+
+**Used by:** Frame core for biometric authentication
+
+**Position in Frame ecosystem:**
+
+```
+frame-catalog ──┬→ frame-identity
+                │
+frame-sentinel ─┘
+```
 
 ```rust
 use sam_identity::{VoiceStore, TypingPatternStore};
@@ -40,6 +59,7 @@ let pattern = TypingPattern::from_keystrokes(&keystroke_data);
 typing_store.store_pattern("user123", &pattern)?;
 let match_score = typing_store.verify_pattern("user123", &pattern)?;
 ```
+
 
 ## Modules
 
@@ -99,6 +119,7 @@ let result = identifier.identify(&confidences)?;
 println!("Verified: {} (confidence: {:.2})", result.user_id, result.confidence);
 ```
 
+
 ## Trust Integration
 
 Bridge biometric scores to multi-dimensional trust:
@@ -114,6 +135,7 @@ voice_bridge.update_voice_trust("user123", &voice_embedding)?;
 let typing_bridge = TypingTrustBridge::new(typing_store, trust_manager);
 typing_bridge.update_typing_trust("user123", &keystroke_pattern)?;
 ```
+
 
 ## Compatibility
 
@@ -140,4 +162,3 @@ Magnus Trent <magnus@blackfall.dev>
 ## Links
 
 - **GitHub:** https://github.com/Blackfall-Labs/sam-identity
-- **SAM Project:** https://github.com/Blackfall-Labs/sam
