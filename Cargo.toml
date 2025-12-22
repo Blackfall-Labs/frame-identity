@@ -1,10 +1,10 @@
 [package]
-name = "sam-identity"
+name = "frame-identity"
 version = "0.1.0"
 edition = "2021"
 authors = ["Magnus Trent <magnus@blackfall.dev>"]
 license = "MIT"
-repository = "https://github.com/Blackfall-Labs/sam-identity"
+repository = "https://github.com/Blackfall-Labs/frame-identity"
 description = "Multi-modal biometric identity verification for AI systems"
 keywords = ["biometrics", "voice", "typing", "face", "authentication"]
 categories = ["authentication", "algorithms"]
@@ -20,8 +20,8 @@ uuid = { version = "1.0", features = ["v4", "serde"] }
 rusqlite = { version = "0.31", features = ["bundled", "serde_json"] }
 
 # Biometric dependencies
-sam-vector = { path = "../sam-vector" }
-sam-trust = { path = "../sam-trust" }
+frame-catalog = { path = "../frame-catalog" }
+frame-sentinel = { path = "../frame-sentinel" }
 
 # Serialization
 bincode = "1.3"

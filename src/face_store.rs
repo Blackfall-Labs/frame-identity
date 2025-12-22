@@ -3,7 +3,7 @@
 //! Stores face signatures for visual identity verification.
 //! Integrates with sam-audio's face recognition for multi-modal identity.
 
-use sam_vector::database::Database;
+use frame_catalog::database::Database;
 use chrono::{DateTime, Utc};
 use rusqlite::{params, Connection, OptionalExtension, Row};
 use serde::{Deserialize, Serialize};
@@ -256,7 +256,7 @@ impl FaceStore {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use sam_vector::database::Database;
+    use frame_catalog::database::Database;
 
     fn create_test_signature(user_id: &str) -> FaceSignature {
         FaceSignature {

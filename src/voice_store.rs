@@ -3,7 +3,7 @@
 //! Stores voice signatures and samples for speaker identification.
 //! Integrates with sam-audio's voice recognition for multi-modal identity verification.
 
-use sam_vector::database::Database;
+use frame_catalog::database::Database;
 use chrono::{DateTime, Utc};
 use rusqlite::{params, Connection, OptionalExtension, Row};
 use serde::{Deserialize, Serialize};

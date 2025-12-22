@@ -3,8 +3,8 @@
 //! Connects typing pattern recognition to multidimensional trust system.
 //! Analyzes linguistic patterns, punctuation style, and behavioral fingerprints.
 
-use sam_vector::database::Database;
-use sam_trust::multidimensional_trust::{MultiDimensionalTrustManager, TrustDimension};
+use frame_catalog::database::Database;
+use frame_sentinel::multidimensional_trust::{MultiDimensionalTrustManager, TrustDimension};
 use crate::typing_patterns::{TypingPattern, TypingPatternStore};
 use anyhow::Result;
 use tracing::{debug, info, warn};

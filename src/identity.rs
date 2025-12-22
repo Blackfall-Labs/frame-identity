@@ -10,7 +10,7 @@ use serde_json::{json, Value};
 use std::sync::{Arc, Mutex};
 use uuid::Uuid;
 
-use sam_vector::database::{Database, DatabaseError, Result};
+use frame_catalog::database::{Database, DatabaseError, Result};
 
 /// Verification status for user identity
 #[derive(Debug, Clone, PartialEq)]

@@ -3,7 +3,7 @@
 //! Connects sam-audio voice identification to multidimensional trust system.
 //! Extracts voice features during authentication and updates voice trust dimension.
 
-use sam_trust::multidimensional_trust::{MultiDimensionalTrustManager, TrustDimension};
+use frame_sentinel::multidimensional_trust::{MultiDimensionalTrustManager, TrustDimension};
 use anyhow::Result;
 use tracing::{debug, info, warn};
 

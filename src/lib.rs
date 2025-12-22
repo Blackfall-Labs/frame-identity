@@ -1,4 +1,4 @@
-//! # SAM Identity - Multi-Modal Biometric Verification
+//! # Frame Identity - Multi-Modal Biometric Verification
 //!
 //! Behavioral and biometric identity verification using voice, typing, and face recognition.
 //!

@@ -10,7 +10,7 @@ use serde_json::Value;
 use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
 
-use sam_vector::database::{Database, DatabaseError, Result};
+use frame_catalog::database::{Database, DatabaseError, Result};
 
 /// Typing pattern fingerprint for a user
 #[derive(Debug, Clone, Serialize, Deserialize)]

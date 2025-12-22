@@ -3,7 +3,7 @@
 ## [0.1.0] - 2025-12-21
 
 ### Added
-- Initial release extracted from SAM project
+- Initial release extracted from Frame project
 - **Voice Recognition**: Biometric voice pattern matching
   - Voice embedding storage (384-dim vectors)
   - Cosine similarity verification
@@ -48,14 +48,14 @@
 - voice_trust_bridge.rs (50 LOC) - Voice integration
 
 ### Dependencies
-- sam-vector (Database, embeddings)
-- sam-trust (Multi-dimensional trust)
+- frame-catalog (Database, embeddings)
+- frame-sentinel (Multi-dimensional trust)
 - rusqlite 0.31 (persistence)
 - bincode 1.3 (binary serialization)
 - regex 1.10 (pattern matching)
 - anyhow 1.0 (error handling)
 
 ### Notes
-- Extracted from [SAM (Societal Advisory Module)](https://github.com/Blackfall-Labs/sam)
+- Extracted from [Frame](https://github.com/Blackfall-Labs/sam)
 - Production-ready for multi-modal biometric systems
 - Designed to prevent impersonation and deepfake attacks

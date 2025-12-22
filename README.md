@@ -1,8 +1,8 @@
-# SAM Identity - Multi-Modal Biometric Verification
+# Frame Identity - Multi-Modal Biometric Verification
 
 **Behavioral and biometric identity verification using voice, typing, and face recognition.**
 
-Extracted from the SAM (Societal Advisory Module) project.
+Extracted from the Frame project.
 
 ## Features
 
@@ -22,7 +22,7 @@ sam-identity = "0.1.0"
 
 ```rust
 use sam_identity::{VoiceStore, TypingPatternStore};
-use sam_vector::Database;
+use frame_catalog::Database;
 
 // Initialize stores
 let db = Database::new("identity.db")?;
@@ -122,8 +122,8 @@ typing_bridge.update_typing_trust("user123", &keystroke_pattern)?;
 
 ## Dependencies
 
-- `sam-vector` - Database, embeddings
-- `sam-trust` - Multi-dimensional trust
+- `frame-catalog` - Database, embeddings
+- `frame-sentinel` - Multi-dimensional trust
 - `rusqlite` (0.31) - Persistence
 - `bincode` (1.3) - Binary serialization
 - `regex` (1.10) - Pattern matching
